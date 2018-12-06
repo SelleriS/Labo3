@@ -15,7 +15,7 @@
 class Randomizer {
 public:
 
-	randomizer();
+	Randomizer();
 
 	/**
 	 * @param min minimum bound
@@ -23,7 +23,7 @@ public:
 	 */
 	int randInt(int min, int max);
 
-	static Sex randSex();
+	Sex randSex();
 
 	/**
 	 * @param min

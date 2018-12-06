@@ -16,9 +16,9 @@
  */
 
 
-Randomizer::randomizer()
+Randomizer::Randomizer()
 {
-	mGenerator {new QRandomGenerator()}
+	mGenerator = new QRandomGenerator();
 }
 
 /**
@@ -28,7 +28,7 @@ Randomizer::randomizer()
  */
 int Randomizer::randInt(int min, int max)
 {
-    return QRandomGenerator->bounded(min, max);
+    return mGenerator->bounded(min, max);
 }
 
 /**
