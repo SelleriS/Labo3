@@ -17,6 +17,7 @@ void advance() override;
 
 private:
 	bool inDanger() override;
+	bool groupBFormed() override;
 };
 
 #endif //_SHARK_H

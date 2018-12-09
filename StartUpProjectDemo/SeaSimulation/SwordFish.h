@@ -18,6 +18,7 @@ void advance() override;
 
 private:
 	bool inDanger() override;
+	bool groupBFormed() override;
 };
 
 #endif //_SWORDFISH_H

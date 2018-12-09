@@ -17,12 +17,18 @@
 /**
  * @return void
  */
-void Shark::advance() {
+void Shark::advance() 
+{
 
 }
 
  bool Shark::inDanger()
  {
 
+	 return false;
+ }
+
+ bool Shark::groupBFormed()
+ {
 	 return false;
  }

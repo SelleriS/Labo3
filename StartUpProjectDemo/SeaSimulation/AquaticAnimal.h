@@ -41,8 +41,8 @@ private:
 	QList<QGraphicsItem*> surroundingQGItems;
 
 	virtual bool inDanger();
-	bool lowEnergy();
 	virtual bool groupBFormed();
+	bool lowEnergy();
 	QList<QGraphicsItem*> scanSurrounding();
 };
 

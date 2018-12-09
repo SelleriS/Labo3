@@ -23,3 +23,8 @@ void SwordFish::advance() {
  {
 	 return false;
  }
+
+ bool SwordFish::groupBFormed()
+ {
+	 return false;
+ }

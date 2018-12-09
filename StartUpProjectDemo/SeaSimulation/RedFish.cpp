@@ -26,3 +26,8 @@ bool RedFish::inDanger()
 	// Implement danger search
 	return false;
 }
+
+bool RedFish::groupBFormed()
+{
+	return false;
+}

@@ -17,7 +17,8 @@ public:
 void advance() override;
 
 private:
-bool inDanger() override;
+	bool inDanger() override;
+	bool groupBFormed() override;
 };
 
 #endif //_REDFISH_H
