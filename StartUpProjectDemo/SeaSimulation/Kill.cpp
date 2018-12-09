@@ -17,6 +17,6 @@
 /**
  * @return void
  */
-void Kill::deleteBasicItem() {
-    return;
+void Kill::deleteBasicItem(AquaticAnimal * aquaticAnimal) {
+    delete aquaticAnimal;
 }

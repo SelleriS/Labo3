@@ -8,10 +8,12 @@
 #ifndef _KILL_H
 #define _KILL_H
 
+#include "AquaticAnimal.h"
+
 class Kill {
 public: 
 	
-void deleteBasicItem();
+void deleteBasicItem(AquaticAnimal * aquaticAnimal);
 };
 
 #endif //_KILL_H

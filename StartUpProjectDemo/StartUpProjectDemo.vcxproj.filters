@@ -170,5 +170,8 @@
     <ClInclude Include="SeaSimulation\TankerBoat.h">
       <Filter>SeaSimulation</Filter>
     </ClInclude>
+    <ClInclude Include="FishType.h">
+      <Filter>SeaSimulation</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

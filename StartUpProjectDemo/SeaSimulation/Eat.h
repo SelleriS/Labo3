@@ -8,13 +8,17 @@
 #ifndef _EAT_H
 #define _EAT_H
 
+#include "AquaticAnimal.h"
 #include "Kill.h"
 
 
-class Eat: public Kill {
+class Eat{
 public: 
-	
-void increaseEnergyLevel();
+	Eat();
+	void increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey);
+
+private:
+	Kill* mKill;
 };
 
 #endif //_EAT_H

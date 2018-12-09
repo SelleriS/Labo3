@@ -14,9 +14,26 @@
  */
 
 
+Eat::Eat()
+	:mKill(new Kill())
+{
+}
+
 /**
- * @return void
+ * if energy level of food is higher than 50 it adds 10 energy points otherwise it adds 5 energy points to the predator
  */
-void Eat::increaseEnergyLevel() {
-    
+void Eat::increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey) 
+{
+	int energyExtra{ 0 };
+	int newEnergy{ predator->getEnergyLevel()};
+	if (prey->getEnergyLevel() > 50) 
+	{
+		energyExtra = 10;
+	}
+	else { energyExtra = 5; }
+
+	newEnergy += energyExtra;
+	newEnergy = newEnergy > 100 ? 100 : newEnergy; // control to not exceed an energy level higher than 100
+	predator->setEnergyLevel(newEnergy);
+	mKill->deleteBasicItem(prey);
 }
