@@ -25,8 +25,8 @@ Eat::Eat()
 void Eat::increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey) 
 {
 	int energyExtra{ 0 };
-	int newEnergy{ predator->getEnergyLevel()};
-	if (prey->getEnergyLevel() > 50) 
+	int newEnergy{ predator->energyLevel()};
+	if (prey->energyLevel() > 50) 
 	{
 		energyExtra = 10;
 	}

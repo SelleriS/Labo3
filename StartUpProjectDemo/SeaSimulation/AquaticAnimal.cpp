@@ -26,27 +26,27 @@ AquaticAnimal::AquaticAnimal(FishType type, int energy_level, qreal speed)
 {
 }
 
- int AquaticAnimal::getEnergyLevel()
+ int AquaticAnimal::energyLevel()
  {
 	 return mEnergyLevel;
  }
 
- qreal AquaticAnimal::getSpeed()
+ qreal AquaticAnimal::speed()
  {
 	 return mSpeed;
  }
 
- qreal AquaticAnimal::getAwarenessRadius()
+ qreal AquaticAnimal::awarenessRadius()
  {
 	 return mAwarenessRadius;
  }
 
- Sex AquaticAnimal::getSex()
+ Sex AquaticAnimal::sex()
  {
 	 return mSex;
  }
 
- FishType AquaticAnimal::getType()
+ FishType AquaticAnimal::fishType()
  {
 	 return mFishType;
  }

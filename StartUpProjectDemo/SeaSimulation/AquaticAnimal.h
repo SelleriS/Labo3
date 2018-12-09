@@ -18,11 +18,11 @@ public:
 
 	AquaticAnimal(FishType type, int energy_level, qreal speed);
 
-	int getEnergyLevel();
-	qreal getSpeed();
-	qreal getAwarenessRadius();
-	Sex getSex();
-	FishType getType();
+	int energyLevel();
+	qreal speed();
+	qreal awarenessRadius();
+	Sex sex();
+	FishType fishType();
 
 	void setEnergyLevel(int newEnergyLevel);
 	void setSpeed(int newSpeed);
