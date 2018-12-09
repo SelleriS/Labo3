@@ -67,3 +67,37 @@ AquaticAnimal::AquaticAnimal(FishType type, int energy_level, qreal speed)
 void AquaticAnimal::advance() {
 	return;
 }
+
+bool AquaticAnimal::inDanger()
+{
+	return false;
+}
+
+bool AquaticAnimal::lowEnergy()
+{
+	return mEnergyLevel<50; // An energy level lower than 50 is considered low
+}
+
+bool AquaticAnimal::groupBFormed()
+{
+	return false;
+}
+
+QList<QGraphicsItem*> AquaticAnimal::scanSurrounding()
+{
+	surroundingQGItems.clear(); // clears list before every scan
+	qreal x = this->x(); // equivalent to this->pos().x()
+	qreal y = this->y(); // gets the y coordinate of the position
+	QGraphicsScene * scene = this->scene();
+	
+
+	for (x; x <= x + mAwarenessRadius; x + 0.1) // the coordinates are given with floating point precision, so the smallest value is 0.1 
+	{
+		for (y; y <= y + mAwarenessRadius; y + 0.1 ) 
+		{
+			//scene->itemAt();
+		}
+	}
+	return QList<QGraphicsItem*>();
+}
+

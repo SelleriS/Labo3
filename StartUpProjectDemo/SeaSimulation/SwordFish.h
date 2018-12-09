@@ -15,6 +15,9 @@ class SwordFish: public AquaticAnimal {
 public: 
 	
 void advance() override;
+
+private:
+	bool inDanger() override;
 };
 
 #endif //_SWORDFISH_H

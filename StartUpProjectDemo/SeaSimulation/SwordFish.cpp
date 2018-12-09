@@ -18,3 +18,8 @@
 void SwordFish::advance() {
     //return;
 }
+
+ bool SwordFish::inDanger()
+ {
+	 return false;
+ }

@@ -15,6 +15,9 @@ class RedFish: public AquaticAnimal {
 public: 
 	
 void advance() override;
+
+private:
+bool inDanger() override;
 };
 
 #endif //_REDFISH_H

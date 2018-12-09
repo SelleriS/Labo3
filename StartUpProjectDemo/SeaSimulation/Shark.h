@@ -14,6 +14,9 @@
 class Shark: public AquaticAnimal {
 public: 
 void advance() override;
+
+private:
+	bool inDanger() override;
 };
 
 #endif //_SHARK_H

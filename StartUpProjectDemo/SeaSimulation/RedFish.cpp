@@ -20,3 +20,9 @@
 void RedFish::advance() {
     //return;
 }
+
+bool RedFish::inDanger()
+{
+	// Implement danger search
+	return false;
+}

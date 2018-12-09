@@ -11,6 +11,7 @@
 #include "BasicItem.h"
 #include "Sex.h"
 #include "FishType.h"
+#include "qlist.h"
 
 
 class AquaticAnimal : public BasicItem {
@@ -36,6 +37,12 @@ private:
 	qreal mAwarenessRadius;
 	Sex mSex = Male;
 	FishType mFishType = RedFish;
+	QList<QGraphicsItem*> surroundingQGItems;
+
+	virtual bool inDanger();
+	bool lowEnergy();
+	bool groupBFormed();
+	QList<QGraphicsItem*> scanSurrounding();
 };
 
 #endif //_AQUATICANIMAL_H

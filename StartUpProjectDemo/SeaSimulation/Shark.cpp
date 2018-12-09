@@ -20,3 +20,9 @@
 void Shark::advance() {
 
 }
+
+ bool Shark::inDanger()
+ {
+
+	 return false;
+ }
