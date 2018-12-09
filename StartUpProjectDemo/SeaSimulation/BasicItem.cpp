@@ -18,6 +18,11 @@ BasicItem::BasicItem()
 {
 }
 
+QRectF BasicItem::boundingRect() const
+{
+	return QRectF();
+}
+
 bool BasicItem::isColliding() {
     return false;
 }

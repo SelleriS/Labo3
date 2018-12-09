@@ -3,6 +3,8 @@
  * @author A. Francoeur
  * @version 0.1
  */
+#include "StartUpProjectDemo.h" // has to be changed if our own StartUpClass is made
+ // Temporarly included to not have errors in the scanSurrounding() method
 
 
 #ifndef _BASICITEM_H

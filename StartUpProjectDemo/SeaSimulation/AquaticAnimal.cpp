@@ -89,15 +89,15 @@ QList<QGraphicsItem*> AquaticAnimal::scanSurrounding()
 	qreal x = this->x(); // equivalent to this->pos().x()
 	qreal y = this->y(); // gets the y coordinate of the position
 	QGraphicsScene * scene = this->scene();
-	
 
-	for (x; x <= x + mAwarenessRadius; x + 0.1) // the coordinates are given with floating point precision, so the smallest value is 0.1 
+	for (x; x <= x + mAwarenessRadius; x += 0.1) // the coordinates are given with floating point precision, so the smallest value is 0.1 
 	{
-		for (y; y <= y + mAwarenessRadius; y + 0.1 ) 
+		for (y; y <= y + mAwarenessRadius; y += 0.1 )
 		{
-			//scene->itemAt();
+			QGraphicsItem * item = scene->itemAt(x, y, QTransform()); // this line wouldn't be possible without including "StartUpProjectDemo.h"
+			if(item) { surroundingQGItems.push_back(item); }			// because scene is from a incomplete class (not instantiated)									   
 		}
 	}
-	return QList<QGraphicsItem*>();
+	return surroundingQGItems;
 }
 
