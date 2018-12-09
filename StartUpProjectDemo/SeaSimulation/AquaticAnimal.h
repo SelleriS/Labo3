@@ -42,7 +42,7 @@ private:
 
 	virtual bool inDanger();
 	bool lowEnergy();
-	bool groupBFormed();
+	virtual bool groupBFormed();
 	QList<QGraphicsItem*> scanSurrounding();
 };
 

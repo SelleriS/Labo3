@@ -16,9 +16,6 @@ class Eat{
 public: 
 	Eat();
 	void increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey);
-
-private:
-	Kill* mKill;
 };
 
 #endif //_EAT_H

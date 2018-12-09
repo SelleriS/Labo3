@@ -15,7 +15,6 @@
 
 
 Eat::Eat()
-	:mKill(new Kill())
 {
 }
 
@@ -35,5 +34,6 @@ void Eat::increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey)
 	newEnergy += energyExtra;
 	newEnergy = newEnergy > 100 ? 100 : newEnergy; // control to not exceed an energy level higher than 100
 	predator->setEnergyLevel(newEnergy);
-	mKill->deleteBasicItem(prey);
+	Kill newKill = Kill();
+    newKill.deleteBasicItem(prey);
 }
