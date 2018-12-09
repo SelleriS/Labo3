@@ -21,26 +21,26 @@ public:
 	 * @param min minimum bound
 	 * @param max maximum bound
 	 */
-	int randInt(int min, int max);
+	static int randInt(int min, int max);
 
-	Sex randSex();
+	static Sex randSex();
 
 	/**
 	 * @param min
 	 * @param max
 	 */
-	qreal randQReal(double min, double max);
+	static qreal randQReal(double min, double max);
 
 	/**
 	 * @param float min
 	 * @param float max
 	 */
-	float randFloat(double min, double max);
+	static float randFloat(double min, double max);
 
-	LoadType randLoadType();
+	static LoadType randLoadType();
 
 private:
-	QRandomGenerator * mGenerator;
+	static QRandomGenerator * mGenerator;
 };
 
 #endif //_RANDOMIZER_H

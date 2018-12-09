@@ -6,19 +6,20 @@
 
 
 #include "Randomizer.h"
-#include <QRandomGenerator>
 
 
 /**
  * Randomizer implementation
  * 
  * Randomizer Class provides methods  to generate random, numbers, types and positions.
+ * All its methods and its attributes are static.
+ * There should be one randomizer object created in the main file, that way mGenerator is initialized.
  */
 
 
 Randomizer::Randomizer()
 {
-	mGenerator = new QRandomGenerator();
+	Randomizer::mGenerator = new QRandomGenerator();
 }
 
 /**

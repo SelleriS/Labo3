@@ -23,7 +23,6 @@ private:
 	int mEnergyLevel;
 	int mMaxEnergyLevel;
 	qreal mSpeed;
-	//qreal mManuverability;
 	Sex mSex = Male;
 };
 
