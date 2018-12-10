@@ -14,22 +14,27 @@
    * AquaticAnimal Class is an abstract representation of an aquatic animal.  AquaticAnimal is killed when a collision occurs with a Boat or FuelLeak.
    */
 
-AquaticAnimal::AquaticAnimal(FishType type, int energy_level, qreal speed)
+AquaticAnimal::AquaticAnimal(FishType type, qreal energy_level, qreal speed)
 	: BasicItem(),
 	mFishType(type),
 	mEnergyLevel(energy_level),
 	mMaxEnergyLevel(100),
 	mSpeed(speed), 
 	mSex(Randomizer::randSex()),
-	mAwarenessRadius(Randomizer::randQReal(5,20)) // awareness radius of a fish is randomly chosen, 
-												  // this will influence the fishes ability to survive
-												  // This is randomly chosen so it must be changed when mor insight is gained
+	mEnergyDepletion(Randomizer::randQReal(0.01, 0.5)), // This will influence the lifespan of a fish. Some fish will burn more energy than others.
+	mAwarenessRadius(Randomizer::randQReal(5,20))	// Awareness radius of a fish is randomly chosen, 
+													// this will influence the fishes ability to survive
 {
 }
 
- int AquaticAnimal::energyLevel()
+ qreal AquaticAnimal::energyLevel()
  {
 	 return mEnergyLevel;
+ }
+
+ qreal AquaticAnimal::energyDepletion()
+ {
+	 return mEnergyDepletion;
  }
 
  qreal AquaticAnimal::speed()
@@ -83,9 +88,9 @@ QGraphicsItem* AquaticAnimal::inDanger()
  * returns if an animal has a low energy level.
  * This will be used in the advance method of the specific animal, because it will change its behavior
  */
-bool AquaticAnimal::lowEnergy()
+bool AquaticAnimal::hungry()
 {
-	return mEnergyLevel<50; // An energy level lower than 50 is considered low
+	return mEnergyLevel < 70; // Fish get hungry when their energylevel is below 70
 }
 
 /**

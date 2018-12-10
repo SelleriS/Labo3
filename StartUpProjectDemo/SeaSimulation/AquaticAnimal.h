@@ -18,9 +18,10 @@
 class AquaticAnimal : public BasicItem {
 public:
 
-	AquaticAnimal(FishType type, int energy_level, qreal speed);
+	AquaticAnimal(FishType type, qreal energy_level, qreal speed);
 
-	int energyLevel();
+	qreal energyLevel();
+	qreal energyDepletion();
 	qreal speed();
 	qreal awarenessRadius();
 	Sex sex();
@@ -32,8 +33,9 @@ public:
 	virtual void advance();
 
 private:
-	int mEnergyLevel;
-	int mMaxEnergyLevel;
+	qreal mEnergyLevel;
+	qreal mMaxEnergyLevel;
+	const qreal mEnergyDepletion;
 	qreal mSpeed;
 	qreal mAwarenessRadius;
 	Sex mSex = Male;
@@ -43,7 +45,7 @@ private:
 protected:
 	virtual QGraphicsItem* inDanger();
 	virtual bool groupBFormed();
-	bool lowEnergy();
+	bool hungry();
 	QList<QGraphicsItem*> scanSurrounding();
 };
 

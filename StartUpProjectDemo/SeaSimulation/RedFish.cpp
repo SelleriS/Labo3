@@ -19,7 +19,7 @@
  */
 
 
- /**
+/**
    * This method will determine and set the new position and rotation of the shark depending on its surrounding (danger?)
    * !!! MOVE IN GROUP IS NOT IMPLEMENTED !!!
    */
@@ -48,6 +48,7 @@ void RedFish::advance() {
 
 	setRotation(newOrientationDegrees);
 	setPos(newPosition);
+	setEnergyLevel(energyLevel() - energyDepletion()); // Every move will deplete a certain amount of energy
 }
 
 QGraphicsItem* RedFish::inDanger()

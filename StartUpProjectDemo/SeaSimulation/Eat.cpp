@@ -23,13 +23,15 @@ Eat::Eat()
  */
 void Eat::increaseEnergyLevel(AquaticAnimal * predator, AquaticAnimal * prey) 
 {
-	int energyExtra{ 0 };
-	int newEnergy{ predator->energyLevel()};
+	const qreal healthyPrey = 10;
+	const qreal tiredPrey = 5;
+	qreal energyExtra{ 0 };
+	qreal newEnergy{ predator->energyLevel()};
 	if (prey->energyLevel() > 50) 
 	{
-		energyExtra = 10;
+		energyExtra = healthyPrey;
 	}
-	else { energyExtra = 5; }
+	else { energyExtra = tiredPrey; }
 
 	newEnergy += energyExtra;
 	newEnergy = newEnergy > 100 ? 100 : newEnergy; // control to not exceed an energy level higher than 100

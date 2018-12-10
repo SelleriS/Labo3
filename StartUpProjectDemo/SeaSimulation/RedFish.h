@@ -13,8 +13,8 @@
 
 class RedFish: public AquaticAnimal {
 public: 
-	
-void advance() override;
+	RedFish();
+	void advance() override;
 
 private:
 	QGraphicsItem* inDanger() override;

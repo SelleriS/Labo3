@@ -39,7 +39,7 @@ void SwordFish::advance()
 		// calculate new position with the new orientation and speed
 		newPosition = pos() + QPointF(qCos(newOrientationRadians), qSin(newOrientationRadians)) * this->speed();
 	}
-	else if (this->lowEnergy())
+	else if (this->hungry())
 	{
 		QGraphicsItem* prey = this->searchPrey(); // Look for the closest prey in the surrounding
 		if (prey)
@@ -69,6 +69,7 @@ void SwordFish::advance()
 
 	setRotation(newOrientationDegrees);
 	setPos(newPosition);
+	setEnergyLevel(energyLevel() - energyDepletion()); // Every move will deplete a certain amount of energy
 }
 
 QGraphicsItem * SwordFish::inDanger()
