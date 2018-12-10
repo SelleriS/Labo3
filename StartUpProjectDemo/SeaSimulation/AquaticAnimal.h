@@ -38,9 +38,10 @@ private:
 	qreal mAwarenessRadius;
 	Sex mSex = Male;
 	FishType mFishType = RedFish;
-	QList<QGraphicsItem*> surroundingQGItems;
+	QList<QGraphicsItem*> mSurroundingQGItems;
 
-	virtual bool inDanger();
+protected:
+	virtual QGraphicsItem* inDanger();
 	virtual bool groupBFormed();
 	bool lowEnergy();
 	QList<QGraphicsItem*> scanSurrounding();

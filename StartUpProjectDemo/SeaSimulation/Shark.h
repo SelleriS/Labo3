@@ -1,6 +1,6 @@
 /**
  * Project SeaSimulation
- * @author A. Francoeur
+ * @author A. Francoeur & S. Selleri
  * @version 0.1
  */
 
@@ -16,8 +16,9 @@ public:
 void advance() override;
 
 private:
-	bool inDanger() override;
+	QGraphicsItem* inDanger() override;
 	bool groupBFormed() override;
+	QGraphicsItem* searchPrey();
 };
 
 #endif //_SHARK_H

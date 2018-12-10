@@ -70,13 +70,13 @@ void AquaticAnimal::advance() {
 }
 
 /**
- * Checks if an animal is in danger
+ * Checks if an animal is in danger and returns its biggest threat.
  * This is implemented in the classes RedFish, SwordFish an Shark because they are specific to those classes
  * Every type of fish has different types of threats.
  */
-bool AquaticAnimal::inDanger()
+QGraphicsItem* AquaticAnimal::inDanger()
 {
-	return false;
+	return nullptr;
 }
 
 /**
@@ -102,7 +102,7 @@ bool AquaticAnimal::groupBFormed()
  */
 QList<QGraphicsItem*> AquaticAnimal::scanSurrounding()
 {
-	surroundingQGItems.clear(); // clears list before every scan
+	mSurroundingQGItems.clear(); // clears list before every scan
 	qreal x = this->x(); // equivalent to this->pos().x()
 	qreal y = this->y(); // gets the y coordinate of the position
 	QGraphicsScene * scene = this->scene();
@@ -111,10 +111,12 @@ QList<QGraphicsItem*> AquaticAnimal::scanSurrounding()
 	{
 		for ((y - mAwarenessRadius); y <= (y + mAwarenessRadius); y += 0.1 )
 		{
-			QGraphicsItem * item = scene->itemAt(x, y, QTransform()); // this line wouldn't be possible without including "StartUpProjectDemo.h"
-			if(item) { surroundingQGItems.push_back(item); }			// because scene is from a incomplete class (not instantiated)									   
+			QGraphicsItem * item = scene->itemAt(x, y, QTransform()); // this line wouldn't be possible without including "StartUpProjectDemo.h" because scene is from a incomplete class (not instantiated)	
+			if(item) { mSurroundingQGItems.push_back(item); } // Make a list of all the items in the neighbourhood											   
 		}
 	}
-	return surroundingQGItems;
+	return mSurroundingQGItems;
 }
+
+
 

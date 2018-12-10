@@ -17,7 +17,7 @@ public:
 void advance() override;
 
 private:
-	bool inDanger() override;
+	QGraphicsItem* inDanger() override;
 	bool groupBFormed() override;
 };
 
